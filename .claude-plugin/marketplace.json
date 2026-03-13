@@ -1,0 +1,40 @@
+{
+  "$schema": "https://anthropic.com/claude-code/marketplace.schema.json",
+  "name": "skills-collection",
+  "description": "A curated collection of Claude Code skills for medical AI PhD research workflows",
+  "owner": {
+    "name": "Jun"
+  },
+  "plugins": [
+    {
+      "name": "literature-and-topic-selection",
+      "description": "Skills for research topic selection, literature review, and academic database search",
+      "source": "./plugins/literature-and-topic-selection",
+      "category": "research"
+    },
+    {
+      "name": "data-preparation-and-processing",
+      "description": "Skills for medical imaging, EHR data, physiological signals, and general data processing",
+      "source": "./plugins/data-preparation-and-processing",
+      "category": "research"
+    },
+    {
+      "name": "model-development-and-experiments",
+      "description": "Skills for deep learning, graph neural networks, explainability, time series, and dimensionality reduction",
+      "source": "./plugins/model-development-and-experiments",
+      "category": "research"
+    },
+    {
+      "name": "results-analysis-and-visualization",
+      "description": "Skills for scientific visualization, statistical analysis, and interactive plotting",
+      "source": "./plugins/results-analysis-and-visualization",
+      "category": "research"
+    },
+    {
+      "name": "paper-writing-and-submission",
+      "description": "Skills for academic writing, venue templates, peer review, and presentation materials",
+      "source": "./plugins/paper-writing-and-submission",
+      "category": "research"
+    }
+  ]
+}
