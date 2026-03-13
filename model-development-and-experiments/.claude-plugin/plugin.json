@@ -1,0 +1,6 @@
+{
+  "name": "model-development-and-experiments",
+  "description": "Skills for deep learning, graph neural networks, explainability, time series, and dimensionality reduction",
+  "version": "1.0.0",
+  "author": { "name": "Jun" }
+}
