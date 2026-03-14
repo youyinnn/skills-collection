@@ -22,7 +22,7 @@ This guide clarifies which skills are best used in **Claude Code** vs **Claude.a
 | `openalex-database` | **Claude Code only** | Queries OpenAlex API programmatically |
 | `bgpt-paper-search` | **Claude Code only** | Requires `Bash` tool (BGPT MCP server) |
 | `pyzotero` | **Claude Code only** | Runs Python `pyzotero` client; reads/writes Zotero library |
-| `literature-review` | **Both** | Claude Code: automated multi-database search (PubMed, arXiv, bioRxiv, etc.) + output Markdown/PDF files; Claude.ai: synthesis and drafting only if papers are manually provided — cannot execute database queries |
+| `literature-review` | **Both** | Claude Code: automated structured API queries across multiple databases + output Markdown/PDF files; Claude.ai: can search via web search but cannot call structured APIs — results are less systematic and not batch-exportable |
 | `citation-management` | **Both** | Claude Code: generate BibTeX files, batch validation; Claude.ai: verify and discuss specific citations |
 | `hypothesis-generation` | **Both** | Claude Code: write hypothesis files, link to data; Claude.ai: conversational hypothesis discussion from observations |
 | `research-grants` | **Both** | Claude Code: write and manage grant documents locally; Claude.ai: draft and iterate on proposal text |
@@ -94,7 +94,7 @@ This guide clarifies which skills are best used in **Claude Code** vs **Claude.a
 | `paper-2-web` | **Claude Code only** | Converts local LaTeX/PDF to web/video/poster formats |
 | `infographics` | **Claude Code only** | Generates infographic files via Bash tools |
 | `scientific-writing` | **Both** | Claude Code: write/manage full manuscript `.tex`/`.md` files with citations; Claude.ai: draft sections, polish prose, discuss argument structure |
-| `venue-templates` | **Both** | Claude Code: apply templates to local manuscript files; Claude.ai: discuss formatting requirements from training knowledge (no web access — may not reflect latest submission guidelines) |
+| `venue-templates` | **Both** | Claude Code: apply templates to local manuscript files; Claude.ai: look up and discuss formatting requirements via web search |
 | `peer-review` | **Both** | Claude Code: structured review output to file; Claude.ai: excellent for iterative rebuttal drafting and reviewer comment analysis |
 | `scholar-evaluation` | **Both** | Claude Code: structured scoring report to file; Claude.ai: real-time discussion of paper strengths/weaknesses |
 | `scientific-slides` | **Both** | Claude Code: generate `.pptx`/`.tex` slide files; Claude.ai: plan structure and content of talks |

@@ -22,7 +22,7 @@
 | `openalex-database` | **Claude Code 专属** | 以编程方式查询 OpenAlex API |
 | `bgpt-paper-search` | **Claude Code 专属** | 需要 `Bash` 工具（BGPT MCP 服务器） |
 | `pyzotero` | **Claude Code 专属** | 运行 Python `pyzotero` 客户端；读写 Zotero 文献库 |
-| `literature-review` | **两者均适合** | Claude Code：自动化多数据库检索（PubMed、arXiv、bioRxiv 等）+ 输出 Markdown/PDF 文件；Claude.ai：仅限在手动提供文献内容时进行综述讨论，无法执行数据库查询 |
+| `literature-review` | **两者均适合** | Claude Code：通过结构化 API 自动化多数据库检索 + 输出 Markdown/PDF 文件；Claude.ai：可通过联网搜索查找文献，但无法调用结构化 API，结果不够系统、无法批量导出 |
 | `citation-management` | **两者均适合** | Claude Code：批量生成 BibTeX 文件、批量验证引用；Claude.ai：针对具体引用进行核查和讨论 |
 | `hypothesis-generation` | **两者均适合** | Claude Code：写入假设文件并关联数据；Claude.ai：基于观测进行对话式假设讨论 |
 | `research-grants` | **两者均适合** | Claude Code：本地撰写和管理基金文档；Claude.ai：起草并迭代申请文本 |
@@ -94,7 +94,7 @@
 | `paper-2-web` | **Claude Code 专属** | 将本地 LaTeX/PDF 转换为网页/视频/海报格式 |
 | `infographics` | **Claude Code 专属** | 通过 Bash 工具生成信息图文件 |
 | `scientific-writing` | **两者均适合** | Claude Code：撰写和管理完整的 `.tex`/`.md` 稿件及引用；Claude.ai：起草段落、润色文字、讨论论证结构 |
-| `venue-templates` | **两者均适合** | Claude Code：将模板应用于本地稿件文件；Claude.ai：根据训练知识讨论格式要求（无联网能力，可能不反映最新投稿规范） |
+| `venue-templates` | **两者均适合** | Claude Code：将模板应用于本地稿件文件；Claude.ai：通过联网搜索查询并讨论最新投稿格式要求 |
 | `peer-review` | **两者均适合** | Claude Code：结构化审稿意见输出至文件；Claude.ai：非常适合迭代式 rebuttal 撰写和评审意见分析 |
 | `scholar-evaluation` | **两者均适合** | Claude Code：结构化评分报告输出至文件；Claude.ai：实时讨论论文优缺点 |
 | `scientific-slides` | **两者均适合** | Claude Code：生成 `.pptx`/`.tex` 幻灯片文件；Claude.ai：规划报告结构和内容 |
