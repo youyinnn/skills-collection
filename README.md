@@ -1,6 +1,15 @@
 # Skills Collection — Medical AI PhD Research Workflows
 
-A curated collection of **51 Claude Code skills** organized by research workflow stage, tailored for AI and Medical AI PhD researchers.
+A curated collection of **50 Claude Code skills** organized by research workflow stage, tailored for AI and Medical AI PhD researchers.
+
+## Documentation
+
+| File | Description |
+|---|---|
+| [PLATFORM_GUIDE.en.md](PLATFORM_GUIDE.en.md) | Which skills work in Claude Code vs Claude.ai |
+| [PLATFORM_GUIDE.zh.md](PLATFORM_GUIDE.zh.md) | 平台兼容性指南（中文） |
+| [recommended_skills_for_medical_ai_phd.en.md](recommended_skills_for_medical_ai_phd.en.md) | Recommended skills by research stage (English) |
+| [recommended_skills_for_medical_ai_phd.zh.md](recommended_skills_for_medical_ai_phd.zh.md) | 按研究阶段推荐的 skills（中文） |
 
 ## Plugins
 
@@ -14,28 +23,32 @@ A curated collection of **51 Claude Code skills** organized by research workflow
 
 ## Installation
 
-Add a plugin to your Claude Code project by referencing its path in `.claude/settings.json`:
+### Step 1 — Add this repository as a marketplace
 
-```json
-{
-  "plugins": [
-    "github:youyinnn/skills-collection/literature-and-topic-selection",
-    "github:youyinnn/skills-collection/data-preparation-and-processing",
-    "github:youyinnn/skills-collection/model-development-and-experiments",
-    "github:youyinnn/skills-collection/results-analysis-and-visualization",
-    "github:youyinnn/skills-collection/paper-writing-and-submission"
-  ]
-}
+```
+/plugin marketplace add youyinnn/skills-collection
 ```
 
-Or install a single plugin if you only need one stage:
+### Step 2 — Install the plugins you need
 
-```json
-{
-  "plugins": [
-    "github:youyinnn/skills-collection/model-development-and-experiments"
-  ]
-}
+```
+/plugin install literature-and-topic-selection@skills-collection
+/plugin install data-preparation-and-processing@skills-collection
+/plugin install model-development-and-experiments@skills-collection
+/plugin install results-analysis-and-visualization@skills-collection
+/plugin install paper-writing-and-submission@skills-collection
+```
+
+You can install only the plugins relevant to your current work.
+
+### Recommended minimal install for Medical AI PhD
+
+```
+/plugin install literature-and-topic-selection@skills-collection
+/plugin install data-preparation-and-processing@skills-collection
+/plugin install model-development-and-experiments@skills-collection
+/plugin install results-analysis-and-visualization@skills-collection
+/plugin install paper-writing-and-submission@skills-collection
 ```
 
 ## Skills by Stage
@@ -97,7 +110,7 @@ Or install a single plugin if you only need one stage:
 | `matplotlib` | Publication-quality static figures |
 | `seaborn` | Statistical data visualization |
 | `plotly` | Interactive plots and dashboards |
-| `scientific-visualization` | Domain-specific scientific plots |
+| `scientific-visualization` | Publication-ready multi-panel figures (Nature / Cell / IEEE style) |
 | `statistical-analysis` | Statistical tests, power analysis, reporting |
 | `statsmodels` | Regression, time series, and econometric models |
 
@@ -120,14 +133,21 @@ Or install a single plugin if you only need one stage:
 
 ```
 skills-collection/
-├── registry.json                          # Plugin registry index
-├── literature-and-topic-selection/
-│   ├── .claude-plugin/plugin.json
-│   └── skills/<skill-name>/
-│       ├── SKILL.md                       # Skill definition and usage
-│       └── references/                    # Reference documentation
-├── data-preparation-and-processing/
-├── model-development-and-experiments/
-├── results-analysis-and-visualization/
-└── paper-writing-and-submission/
+├── .claude-plugin/
+│   └── marketplace.json               # Marketplace definition
+├── registry.json                      # Plugin registry index
+├── PLATFORM_GUIDE.en.md               # Platform compatibility guide (English)
+├── PLATFORM_GUIDE.zh.md               # Platform compatibility guide (Chinese)
+├── recommended_skills_for_medical_ai_phd.en.md
+├── recommended_skills_for_medical_ai_phd.zh.md
+└── plugins/
+    ├── literature-and-topic-selection/
+    │   ├── .claude-plugin/plugin.json
+    │   └── skills/<skill-name>/
+    │       ├── SKILL.md               # Skill definition and usage
+    │       └── references/            # Reference documentation
+    ├── data-preparation-and-processing/
+    ├── model-development-and-experiments/
+    ├── results-analysis-and-visualization/
+    └── paper-writing-and-submission/
 ```
