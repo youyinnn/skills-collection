@@ -35,6 +35,12 @@
       "description": "Skills for academic writing, venue templates, peer review, and presentation materials",
       "source": "./plugins/paper-writing-and-submission",
       "category": "research"
+    },
+    {
+      "name": "humanizer",
+      "description": "Skills for removing AI writing patterns and making text sound more natural and human",
+      "source": "./plugins/humanizer",
+      "category": "writing"
     }
   ]
 }

@@ -1,0 +1,6 @@
+{
+  "name": "humanizer",
+  "description": "Skills for removing AI writing patterns and making text sound more natural and human",
+  "version": "1.0.0",
+  "author": { "name": "blader", "url": "https://github.com/blader/humanizer" }
+}
