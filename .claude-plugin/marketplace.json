@@ -41,6 +41,12 @@
       "description": "Skills for removing AI writing patterns and making text sound more natural and human",
       "source": "./plugins/humanizer",
       "category": "writing"
+    },
+    {
+      "name": "claude-writing-rubric",
+      "description": "Bilingual (EN/ZH) workflow, LaTeX editing, and prose style rubric accumulated from user feedback on scientific paper writing",
+      "source": "./plugins/claude-writing-rubric",
+      "category": "writing"
     }
   ]
 }

@@ -1,0 +1,6 @@
+{
+  "name": "claude-writing-rubric",
+  "description": "Bilingual (EN/ZH) workflow, LaTeX editing, and prose style rubric accumulated from user feedback on scientific paper writing",
+  "version": "1.0.0",
+  "author": { "name": "Jun" }
+}
