@@ -1,0 +1,6 @@
+{
+  "name": "paper-skeleton",
+  "description": "Build and maintain a paper skeleton (one load-bearing sentence per paragraph, roles, argument map) for a LaTeX manuscript in an Obsidian vault, tied to the tex by labels so it survives revision",
+  "version": "1.0.0",
+  "author": { "name": "Jun" }
+}

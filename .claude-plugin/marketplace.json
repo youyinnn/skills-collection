@@ -47,6 +47,12 @@
       "description": "Bilingual (EN/ZH) workflow, LaTeX editing, and prose style rubric accumulated from user feedback on scientific paper writing",
       "source": "./plugins/claude-writing-rubric",
       "category": "writing"
+    },
+    {
+      "name": "paper-skeleton",
+      "description": "Skill for building and maintaining a paper skeleton (load-bearing sentence per paragraph, roles, argument map) of a LaTeX manuscript in an Obsidian vault",
+      "source": "./plugins/paper-skeleton",
+      "category": "writing"
     }
   ]
 }
