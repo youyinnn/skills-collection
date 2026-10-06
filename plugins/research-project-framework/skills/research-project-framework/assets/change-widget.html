@@ -1,0 +1,24 @@
+<style>
+.cw-r{border-top:0.5px solid var(--border);padding:10px 0;font-size:14px;line-height:1.6}
+.cw-loc{font-family:var(--font-mono);font-size:12px;color:var(--text-secondary)}
+.cw-r del{color:var(--text-danger)}
+.cw-r ins{color:var(--text-success);text-decoration:none}
+.cw-r code{font-family:var(--font-mono);font-size:12.5px}
+.cw-tr{font-size:13px;color:var(--text-secondary)}
+.cw-why{font-size:13px;color:var(--text-muted)}
+</style>
+<h2 class="sr-only">本轮改动:每处的位置、原句、新句与理由</h2>
+<div class="cw-r">
+<div class="cw-loc">section/results.tex:14 · 第 2 段第 3 句</div>
+<div>原:The model <del>clearly</del> outperforms the baseline.</div>
+<div class="cw-tr">该模型明显优于基线。</div>
+<div>新:The model outperforms the baseline <ins>on 7 of 10 datasets</ins>.</div>
+<div class="cw-tr">该模型在 10 个数据集中的 7 个上优于基线。</div>
+<div class="cw-why">程度词换成数,数出自结果表。</div>
+</div>
+<div class="cw-r">
+<div class="cw-loc">README.md:42 · 开张清单第 3 步</div>
+<div>原:建 <code>.gitignore</code>,至少写上 <code>derived/repo_state.md</code>。</div>
+<div>新:建 <code>.gitignore</code>,至少写上 <code>derived/repo_state.md</code><ins> 与 <code>__pycache__/</code></ins>。</div>
+<div class="cw-why">测试跑过后会生成这个目录,不写进去就一直显示为未提交。</div>
+</div>

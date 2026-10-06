@@ -53,6 +53,12 @@
       "description": "Skill for building and maintaining a paper skeleton (load-bearing sentence per paragraph, roles, argument map) of a LaTeX manuscript in an Obsidian vault",
       "source": "./plugins/paper-skeleton",
       "category": "writing"
+    },
+    {
+      "name": "research-project-framework",
+      "description": "Working framework for running a paper-type research project with an AI assistant: project setup, records, collaboration rules, research and writing workflows, with templates and scripts",
+      "source": "./plugins/research-project-framework",
+      "category": "research"
     }
   ]
 }

@@ -1,0 +1,23 @@
+{
+  "hooks": {
+    "PostToolUse": [
+      {
+        "matcher": "Write|Edit|Bash",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python3 \"${CLAUDE_PROJECT_DIR}/scripts/humanizer_scan.py\"",
+            "timeout": 20,
+            "statusMessage": "humanizer_scan"
+          },
+          {
+            "type": "command",
+            "command": "python3 \"${CLAUDE_PROJECT_DIR}/scripts/repo_check.py\" --hook",
+            "timeout": 20,
+            "statusMessage": "repo_check"
+          }
+        ]
+      }
+    ]
+  }
+}

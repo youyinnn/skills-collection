@@ -1,0 +1,8 @@
+{
+  "readableLineLength": true,
+  "strictLineBreaks": false,
+  "alwaysUpdateLinks": true,
+  "userIgnoreFilters": [
+    "inputs/papers/"
+  ]
+}

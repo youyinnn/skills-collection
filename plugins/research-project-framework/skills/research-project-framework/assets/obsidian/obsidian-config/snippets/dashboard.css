@@ -1,0 +1,140 @@
+/* Home 的 dashboard 排版。规则全部挂在 .dash- 前缀下,只影响那一个 dataviewjs 块。
+   颜色走 Obsidian 主题变量,深色浅色都跟着变。
+   要调密度改两个数字:磁贴最小宽度 minmax(140px),分栏最小宽度 columns 后面的 320px。 */
+
+/* ---------- 磁贴 ---------- */
+.dash-tiles {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 10px;
+  margin: 0.4em 0 1.1em;
+}
+.dash-tile {
+  background: var(--background-secondary);
+  border: 1px solid var(--background-modifier-border);
+  border-radius: 8px;
+  padding: 9px 12px;
+}
+.dash-tile .n { font-size: 1.5em; font-weight: 600; line-height: 1.15; }
+.dash-tile .k { font-size: 0.78em; color: var(--text-muted); margin-top: 1px; }
+.dash-tile .s { font-size: 0.72em; color: var(--text-faint); margin-top: 2px; }
+.dash-tile.warn { border-color: var(--text-error); }
+.dash-tile.warn .n { color: var(--text-error); }
+.dash-tile.ok .n { color: var(--text-success); }
+.dash-tile.click { cursor: pointer; }
+.dash-tile.click:hover { background: var(--background-modifier-hover); }
+
+/* ---------- 面板 ---------- */
+.dash-grid { columns: 2 320px; column-gap: 14px; }
+.dash-panel {
+  break-inside: avoid;
+  -webkit-column-break-inside: avoid;
+  border: 1px solid var(--background-modifier-border);
+  border-radius: 8px;
+  padding: 8px 12px 10px;
+  margin: 0 0 14px;
+}
+.dash-panel > .h {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+  font-size: 0.82em;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  color: var(--text-muted);
+  margin-bottom: 6px;
+}
+.dash-panel.wide { margin-bottom: 14px; }
+
+/* ---------- 筛选与搜索 ---------- */
+.dash-q {
+  flex: 0 1 200px;
+  font-size: 0.92em;
+  padding: 2px 8px;
+  height: 24px;
+  border-radius: 5px;
+  border: 1px solid var(--background-modifier-border);
+  background: var(--background-primary);
+  color: var(--text-normal);
+}
+.dash-chips { display: flex; gap: 5px; flex-wrap: wrap; margin-left: auto; }
+.dash-chip {
+  cursor: pointer;
+  font-weight: 400;
+  font-size: 0.95em;
+  padding: 1px 9px;
+  border-radius: 11px;
+  border: 1px solid var(--background-modifier-border);
+  color: var(--text-muted);
+}
+.dash-chip:hover { background: var(--background-modifier-hover); }
+.dash-chip.on {
+  background: var(--interactive-accent);
+  border-color: var(--interactive-accent);
+  color: var(--text-on-accent);
+}
+
+/* ---------- 表 ---------- */
+.dash-table { width: 100%; border-collapse: collapse; font-size: 0.85em; margin: 0; }
+.dash-table th, .dash-table td {
+  padding: 3px 8px 3px 0;
+  border: none;
+  text-align: left;
+  vertical-align: middle;
+}
+.dash-table th { color: var(--text-faint); font-weight: 500; font-size: 0.92em; }
+.dash-table tr + tr td { border-top: 1px solid var(--background-modifier-border); }
+.dash-panel .m { color: var(--text-muted); }
+.dash-open { color: var(--link-color, var(--text-accent)); cursor: pointer; white-space: nowrap; }
+.dash-open:hover { text-decoration: underline; }
+.dash-sel {
+  font-size: 0.92em;
+  padding: 1px 4px;
+  height: 22px;
+  border-radius: 5px;
+  border: 1px solid var(--background-modifier-border);
+  background: var(--background-primary);
+  color: var(--text-normal);
+}
+
+/* ---------- 进度条 ---------- */
+.dash-clickrow { cursor: pointer; padding: 1px 4px; margin: 0 -4px; border-radius: 5px; }
+.dash-clickrow:hover { background: var(--background-modifier-hover); }
+.dash-clickrow.on { background: var(--background-modifier-hover); }
+.dash-bar { background: var(--background-modifier-border); height: 5px; border-radius: 3px; overflow: hidden; margin: 3px 0 7px; }
+.dash-bar > i { display: block; height: 100%; background: var(--text-accent); }
+.dash-row { display: flex; justify-content: space-between; font-size: 0.82em; }
+.dash-late { color: var(--text-error); }
+.dash-note { font-size: 0.78em; color: var(--text-faint); margin-top: 5px; line-height: 1.45; }
+
+/* ---------- 实时预览下的悬停外框 ----------
+   鼠标停在代码块上时冒出来的那一圈不是 border,是 box-shadow。Obsidian 自己的规则
+   是:
+
+     @media (hover: hover) {
+       .markdown-source-view.mod-cm6 .cm-embed-block:not(.cm-table-widget, .cm-lang-base):hover {
+         box-shadow: var(--embed-block-shadow-hover);
+         border-radius: var(--radius-s);
+         overflow: hidden;
+         cursor: text;
+       }
+     }
+
+   下面只对 dashboard 那一块取消,别的代码块照旧有外框。选中它靠 :has(.dash-root),
+   Obsidian 自带的 CSS 里已经用了 14 处 :has(),所以引擎支持这条没有疑问。
+   .mod-cm6 写两遍是把权重抬到官方规则之上,不必赌 CSS 片段的加载顺序。
+   只影响实时预览与源码模式,阅读模式本来就没有这圈外框。 */
+@media (hover: hover) {
+  .markdown-source-view.mod-cm6.mod-cm6 .cm-embed-block:has(.dash-root):hover {
+    box-shadow: none;
+  }
+}
+
+/* 悬停时右上角还会冒一个铅笔「编辑」按钮,那是另一条规则(:hover .edit-block-button
+   { opacity: 1 })。要连它一起去掉,把下面三行的注释去掉即可。这里默认不动,
+   因为你问的是边框。
+.markdown-source-view.mod-cm6.mod-cm6 .cm-embed-block:has(.dash-root):hover .edit-block-button {
+  opacity: 0;
+}
+*/

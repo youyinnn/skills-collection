@@ -1,0 +1,5 @@
+{
+  "folder": "records/log",
+  "format": "YYYY-MM-DD",
+  "template": "tracking/templates/log"
+}
