@@ -82,7 +82,7 @@ metadata:
 | `assets/obsidian/Home.md` | 项目根目录 `Home.md`(仪表盘);阶段的显示名填在里面的 `PH` 表 |
 | `assets/obsidian/Index.md`、`assets/obsidian/Setup.md` | `tracking/` |
 | `assets/obsidian/obsidian-config/` | 项目根目录 `.obsidian/` |
-| `assets/settings.json` | `.claude/settings.json`;钩子命令用 `${CLAUDE_PROJECT_DIR}` 指项目根目录,不用改,克隆到别的位置也能用 |
+| `assets/settings.json` | `.claude/settings.json`,原样拷:钩子命令里用的是 Claude Code 表示项目根目录的变量(写法见这个文件本身),不用改成绝对路径,克隆到别的位置也能用 |
 
 ## scripts/
 
