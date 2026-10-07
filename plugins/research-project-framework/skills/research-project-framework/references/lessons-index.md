@@ -21,6 +21,8 @@
 | 写作:内容先于测量 | 先定方案再量范文,漏量关键特征 | `references/writing-workflow.md` 第 1 节 |
 | 写作:图和字一起改 | 图每改一轮,附的图注就作废 | `references/writing-workflow.md` 第 6 节 |
 | 写作:优化越改越长 | 修句子时只加字不删字 | `references/writing-workflow.md` 第 3 节第 1 项 |
+| 写作:读者要靠猜 | 省掉了行为者、比较对象、条件或单位;代词所指不清;拆句后带出新毛病 | `references/writing-style.md` 第 7 节 |
+| 写作:句子有 AI 腔 | 一个主语后挂两段以上逗号修饰;口语说法;程度词不带数 | `references/writing-style.md` 第 3、4 节 |
 | 冲掉用户的手改 | 重跑生成脚本覆盖了用户或合作者在编辑器里的改动 | `references/writing-workflow.md` 第 6 节 |
 | 身份数据进了库 | 访谈录音、带真名的转录稿进了 git,或被助手读到 | `references/project-types/human-participants.md` 第 2、3 节 |
 | 改坏了别人的文字 | 合作者的句子、参与者的原话被优化或压尾巴改动 | `references/project-types/collaborators-overleaf.md` 第 3 节;`references/project-types/human-participants.md` 第 8 节 |

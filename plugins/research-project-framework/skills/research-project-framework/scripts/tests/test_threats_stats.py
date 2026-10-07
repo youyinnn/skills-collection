@@ -5,7 +5,7 @@ import threats_stats as ts
 
 MD = """# 1 Introduction
 
-We study saliency maps.
+We study call graphs.
 
 # 2 Threat Model
 

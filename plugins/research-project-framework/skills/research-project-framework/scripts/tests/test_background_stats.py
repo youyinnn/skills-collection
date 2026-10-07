@@ -4,15 +4,15 @@ import background_stats as bg
 
 MD = """# 1 Introduction
 
-We study saliency maps and selection. Findings follow.
+We study call graphs and selection. Findings follow.
 
 # 2 Background
 
-Background opens here with a framing sentence about saliency.
+Background opens here with a framing sentence about graphs.
 
-## 2.1 Saliency Maps
+## 2.1 Call Graphs
 
-A saliency map is defined as a heat map [\\[1\\]](#p). Formally $s_{i} = f(x)$ holds.
+A call graph is defined as a directed graph [\\[1\\]](#p). Formally $s_{i} = f(x)$ holds.
 
 ## 2.2 Motivating Example
 
@@ -35,9 +35,9 @@ def test_cut_units_and_classes():
     assert (num, title) == (2, "Background")
     units = bg.units_of(raw, subs, title)
     assert [(l, k) for l, k, in [(u[0], u[2]) for u in units]] == [
-        ("", "preamble"), ("Saliency Maps", "definitional"), ("Motivating Example", "motivation"),
+        ("", "preamble"), ("Call Graphs", "definitional"), ("Motivating Example", "motivation"),
         ("Related Work", "related-work")]
-    u = bg.unit_row("p", "empirical", 2, 2, *units[1], intro="we study saliency maps and selection")
+    u = bg.unit_row("p", "empirical", 2, 2, *units[1], intro="we study call graphs and selection")
     assert (u["named_in_intro"], u["def_sentences"], u["formulas"], u["cite_groups"]) == (True, 2, 1, 1)
 
 
@@ -73,7 +73,7 @@ def test_section_kinds_and_label_words():
     assert bg.kind_of_section("Background and Motivation") == "definitional"
     # label words match whole words in the introduction, singular or plural
     assert bg.named_in({"rust"}, "we trust the compiler") is False
-    assert bg.named_in({"rust"}, "rust programs") and bg.named_in({"maps"}, "a saliency map") and bg.named_in({"map"}, "the maps")
+    assert bg.named_in({"rust"}, "rust programs") and bg.named_in({"graphs"}, "a call graph") and bg.named_in({"graph"}, "the graphs")
     # a paper without a related-work heading gets a row instead of aborting
     assert bg.relation(2, "Background", None) == "no-rw"
     row = dict(has_background=True, relation="no-rw", units=1, def_units=1, def_units_named_in_intro=1, motiv_units=0, rw_units=0)

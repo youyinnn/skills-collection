@@ -48,7 +48,7 @@
 8. **算力与付费调用。** 模型训练与大规模评估不在本机跑,报成云 GPU 作业由用户排(单测、小例子可以跑,跑前说一句);调用付费 API 前报调用数、花销与耗时,等用户许可,跑完报 token、花销与耗时。
 9. **文献。** 一切检索走浏览器,不用命令行或脚本调文献 API;PDF 统一用一种工具转成 markdown,逐字引文回 PDF 核。
 10. **边界。** 只读项目内的文件与用户点名的文件;不提用户别的论文、课程、截止日期。例外:派生或扩展项目的母项目路径可读、母论文可以提;有人类参与者时,身份数据即使被点名也不读。
-11. **写作。** 按 `tracking/Writing-workflow.md` 写;「优化某节」按其中的清单逐项走。
+11. **写作。** 按 `tracking/Writing-workflow.md` 写;「优化某节」按其中的清单逐项走;写成什么样照 skill research-project-framework 的 `references/writing-style.md`。
 12. **触发词。** 「开始」「提交」「检查」「优化某节」按 skill research-project-framework 的 `references/collaboration.md` 第 1 节与 `references/project-management.md` 第 5 节的意思执行;工作语言不是中文时,对应的英文说法写在这里(见 skill research-project-framework 的 `references/glossary-zh-en.md`)。
 
 ## 历史记录去哪了

@@ -28,11 +28,12 @@ metadata:
 | 什么时候先问、什么时候直接改、什么时候只报告;东西怎么给用户看;回答的分寸;边界 | `references/collaboration.md` |
 | 定方向的顺序、八种判断错误、文献、实验与算力、标注、复现包 | `references/research-workflow.md` |
 | 量范文、起稿一节、优化一节、压尾巴、逐句要理由、模拟评审、引用核查、图表、投稿前检查 | `references/writing-workflow.md`;开张后读项目里按项目改过的 `tracking/Writing-workflow.md` |
+| 写成什么样:用词、句子、标点、数字与缩写、可读性、段落、图表的指向、LaTeX 源文件 | `references/writing-style.md` |
 | 出了错,想找管它的规则 | `references/lessons-index.md` |
 | 工作语言不是中文 | `references/glossary-zh-en.md` |
 | 在对话里展示改动 | `assets/change-widget.html` 的样式,规则见 `references/collaboration.md` 第 2 节 |
 
-`references/` 里前五份(project-management、collaboration、research-workflow、writing-workflow、lessons-index)是核心五份,所有项目都适用。`references/project-types/` 里的六份补充只在对应的问题答「是」时用,冲突处优先于核心五份。
+`references/` 里的六份(project-management、collaboration、research-workflow、writing-workflow、writing-style、lessons-index)是核心文档,所有项目都适用。`references/project-types/` 里的六份补充只在对应的问题答「是」时用,冲突处优先于核心文档。
 
 ## 先答六个问题
 

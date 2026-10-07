@@ -6,7 +6,7 @@ import results_stats as rs
 
 MD = """# 1 Introduction
 
-We study saliency maps. RQ1 asks about the frontier.
+We study call graphs. RQ1 asks about the frontier.
 
 # 2 Background
 

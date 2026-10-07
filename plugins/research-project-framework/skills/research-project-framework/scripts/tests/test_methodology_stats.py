@@ -5,7 +5,7 @@ import methodology_stats as ds
 
 MD = """# 1 Introduction
 
-We study saliency maps. RQ1 asks about the frontier.
+We study call graphs. RQ1 asks about the frontier.
 
 # 2 Background
 
@@ -29,7 +29,7 @@ We use ten datasets [\\[1\\]](#p) because they are public. Each run is repeated 
 
 ## 4.2 Evaluation Metrics
 
-Macro F1 is the metric. Differences are tested with a Wilcoxon test.
+Accuracy is the metric. Differences are tested with a Wilcoxon test.
 
 # 5 Evaluation
 

@@ -5,7 +5,7 @@ import discussion_stats as ds
 
 MD = """# 1 Introduction
 
-We study saliency maps.
+We study call graphs.
 
 # 3 Results
 
